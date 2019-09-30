@@ -1,0 +1,70 @@
+/*
+HEADER
+ */
+.header_top{
+    position: relative;
+    z-index: 9991;
+    padding-top: 30px;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -o-transition: 0.2s all ease;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(4%, #1D2540), color-stop(94%, #02498E));
+    background-image: -webkit-linear-gradient(left, #1D2540 4%, #02498E 94%);
+    background-image: -o-linear-gradient(left, #1D2540 4%, #02498E 94%);
+    background-image: linear-gradient(90deg, #1D2540 4%, #02498E 94%);
+}
+.logo-coveo{
+    background: transparent url(/pub/img/coveo_logo.svg) no-repeat left top;
+    width: 95px;
+    height: 34px;
+    display: block;
+    text-indent: -99px;
+    overflow: hidden;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 95px;
+    flex: 0 0 95px;
+    background-size: cover;
+}
+
+.header-menu > *{
+    float: left;
+}
+.header-message{
+    margin-left: 5%;
+}
+/*
+BODY
+ */
+.coveo-orange{
+    background-color: #E56613!important;
+}
+.coveo-red{
+    background-color: #FF0000!important;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+/*
+FOOTER
+ */
+.footer-grad{
+    background: -webkit-gradient(linear, left top, right top, from(#33e3d9), color-stop(60%, #1a82be));
+    background: -webkit-linear-gradient(left, #33e3d9 0%, #1a82be 60%);
+    background: -o-linear-gradient(left, #33e3d9 0%, #1a82be 60%);
+    background: linear-gradient(to right, #33e3d9 0%, #1a82be 60%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33e3d9', endColorstr='#1a82be',GradientType=1 );
+    text:white;
+}
+.gtm-footer{
+    float: left;
+    font-size: 17px;
+    line-height: 30px;
+    color:white;
+    margin: 0 0.5%;
+}

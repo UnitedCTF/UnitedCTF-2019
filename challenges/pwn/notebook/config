@@ -1,0 +1,10 @@
+service notebook
+{
+    type = unlisted
+    protocol = tcp
+    wait = no
+    port = 3000
+    user = challenge
+    server = /app/notebook
+    server_args = /dev/null
+}

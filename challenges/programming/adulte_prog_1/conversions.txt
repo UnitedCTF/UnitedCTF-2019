@@ -1,0 +1,16 @@
+csGames coveoBlitz 190
+hackfestCTF northsecCTF 0.1
+hackfestCTF googleGames 5
+northsecCTF iHack 15
+northsecCTF cunUHacks 26.1
+hackatown northsecCTF 0.56
+unitedCTF csGames 0.002
+coveoBlitz hackfestCTF 2
+jdisGames LHGames 6
+jdisGames unitedCTF 0.02
+ubisoftGameJam jdisGames 0.4
+qualifCSGames csawFinals 2
+qualifCSGames picoCTF 6
+csawQuals qualifCSGames 0.5
+csawFinals ubisoftGameJam 2
+picoCTF geekSeekCTF 1.3

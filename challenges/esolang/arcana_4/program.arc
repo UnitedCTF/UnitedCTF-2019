@@ -1,0 +1,119 @@
+XXII. C
+XXII. X
+I.
+XXII. V
+I.
+XXII. I
+I.
+XXII. L
+XXII. X
+I.
+XXII. I
+XXII. V
+II.
+I.
+XXII. L
+XXII. X
+I.
+XXII. X
+I.
+XXII. V
+I.
+XXII. I
+I.
+XXII. I
+I.
+XXII. L
+XXII. I
+I.
+XXII. L
+XXII. X
+I.
+XXII. X
+I.
+XXII. V
+I.
+XXII. I
+I.
+XXII. X
+XXII. L
+II.
+XXII. V
+I.
+XXII. I
+I.
+XXII. L
+XXII. X
+I.
+XXII. X
+I.
+XXII. I
+I.
+XXII. I
+I.
+XXII. I
+I.
+XXII. L
+XXII. X
+I.
+XXII. X
+I.
+XXII. X
+I.
+XXII. V
+I.
+XXII. I
+I.
+XXII. I
+I.
+XXII. I
+I.
+XXII. L
+XXII. X
+I.
+XXII. X
+I.
+XXII. X
+I.
+XXII. V
+I.
+XXII. I
+I.
+XXII. I
+I.
+XXII. I
+I.
+XXII. V
+XXII. L
+II.
+XXII. C
+XXII. I
+I.
+XXII. I
+I.
+XXII. I
+I.
+XXII. X
+XXII. C
+II.
+XXII. V
+I.
+XXII. I
+I.
+XXII. I
+I.
+XXII. C
+XXII. V
+I.
+XXII. I.
+I.
+XXII. I.
+I.
+XXII. I.
+I.
+XXII. C
+XXII. I
+I.
+XXII. I
+I.
+XX.

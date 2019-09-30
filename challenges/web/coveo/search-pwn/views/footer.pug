@@ -1,0 +1,18 @@
+footer.page-footer(class='footer-grad')
+    .container
+        .row
+            form.subscribe-form.col.s12
+                .row(style="margin-bottom:0;")
+                    .input-field.col.s6.white-text
+                        input.subscribe-email-input(class='white-text' placeholder='email' type='text' name='email')
+                        label.white-text Subscribe to the newsletter
+        .row
+            ul(class="social-media list-unstyled d-flex justify-content-between")
+                li: a(class="gtm-footer" href='https://www.facebook.com/coveolife'): i(class="fab fa-facebook-f" aria-hidden="true")
+                li: a(class="gtm-footer" href='https://www.linkedin.com/company/coveo'): i(class="fab fa-linkedin" aria-hidden="true")
+                li: a(class="gtm-footer" href='https://twitter/coveo'): i(class="fab fa-twitter" aria-hidden="true")
+                li: a(class="gtm-footer" href='https://www.instagram.com/coveolife'): i(class="fab fa-instagram" aria-hidden="true")
+                li: a(class="gtm-footer" href='https://www.youtube.com/CoveoInsights'): i(class="fab fa-youtube" aria-hidden="true")
+                li: a(class="gtm-footer" href='https://www.github.com/coveo'): i(class="fab fa-github" aria-hidden="true")
+if isAdmin
+    a(class='btn coveo-orange' href='/admin') Admin Panel

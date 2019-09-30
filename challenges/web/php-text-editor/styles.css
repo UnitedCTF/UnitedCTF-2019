@@ -1,0 +1,7 @@
+form {
+    display: inline;
+}
+
+textarea {
+    min-height: 400px;
+}

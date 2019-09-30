@@ -1,0 +1,22 @@
+doctype html
+
+include head
+    title Nice try
+
+
+body
+    include header.pug
+    +header('Nice try')
+    main
+        .container(id="result-location")
+                div(class='result-container row center-align')
+                    div(class='col s6 offset-s3')
+                        div(class='card coveo-orange')
+                            div(class='card-content white-text')
+                                p(class='card-text') The link you provided was successfully validated but...
+                div(class='result-container row center-align')
+                    div(class='col s6 offset-s3')
+                        div(class='card coveo-red')
+                            div(class='card-content white-text')
+                                p(class='card-text') No flag for you
+    include footer.pug

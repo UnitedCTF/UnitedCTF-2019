@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Message decryptor</title>
+    </head>
+    <body>
+        <h1>Message decryptor</h1>
+        <h2>We'll decrypt <i>almost</i> anything for free!</h2>
+        Encrypted flag: {{ flag }} <br />
+        Can you decrypt it? ;) <br /><br />
+        <form method="GET" action="/decrypt">
+            <label for="message">Your encrypted message (number):</label><input name="message" type="text" /><br />
+            <input type="submit" value="Decrypt" />
+        </form>
+    </body>
+</html>

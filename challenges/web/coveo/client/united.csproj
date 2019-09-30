@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="images\*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="pages\*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+      <PackageReference Include="Qml.Net" Version="0.10.1" />
+      <PackageReference Include="Qml.Net.LinuxBinaries" Version="0.10.1" />
+      <PackageReference Include="Qml.Net.OSXBinaries" Version="0.10.1" />
+      <PackageReference Include="Qml.Net.WindowsBinaries" Version="0.10.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Main.qml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

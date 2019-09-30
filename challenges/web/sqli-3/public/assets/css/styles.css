@@ -1,0 +1,32 @@
+body {
+    padding-top: 5rem;
+    background-color: lightgray;
+}
+
+.main-container {
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.starter-template {
+    width: 100%;
+    text-align: center;
+}
+
+.mycode {
+    overflow: scroll;
+    padding: 1rem;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.login-form {
+    margin-top: 100px;
+    padding: 20px;
+    border: 2px ridge black;
+    background-color: snow;
+    height: 250px;
+}

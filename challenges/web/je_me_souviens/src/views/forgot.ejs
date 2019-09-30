@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Oublie de mot de passe</title>
+    <link rel="stylesheet" type="text/css" href="./Beagle_files/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="./Beagle_files/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="./Beagle_files/app.css" type="text/css">
+    <style>
+      .error {
+        color :red
+      }
+    </style>
+  </head>
+  <body class="be-splash-screen">
+    <div class="be-wrapper be-login">
+      <div class="be-content">
+        <div class="main-content container-fluid">
+          <div class="splash-container forgot-password">
+            <div class="card card-border-color card-border-color-primary">
+              <div class="card-header"><img class="logo-img" src="./Beagle_files/logo-xx.png" alt="logo" width="102"><span class="splash-description">Mot de passe oublié?</span></div>
+              <% if (locals.error) { %>
+                <span class="splash-description error">L'adresse courriel fournie est invalide.</span>
+              <% } %>
+              <div class="card-body">
+                <form action="/verify" method="GET">
+                  <p>Vous receverez un code de 4 chiffres par courriel.</p>
+                  <div class="form-group pt-4">
+                    <input class="form-control" type="email" name="email" required="" placeholder="Adresse courriel" autocomplete="off">
+                  </div>
+                  <p class="pt-1 pb-4">Vous avez oublié votre courriel? <a href="https://www.youtube.com/watch?v=yPWhV9nlsrU">Contactez nous</a>.</p>
+                  <div class="form-group pt-1"><button type="submit" class="btn btn-block btn-primary btn-xl">Réinitialiser mot de passe</button></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./Beagle_files/jquery.min.js" type="text/javascript"></script>
+    <script src="./Beagle_files/perfect-scrollbar.min.js" type="text/javascript"></script>
+    <script src="./Beagle_files/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="./Beagle_files/app.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      	//-initialize the javascript
+      	App.init();
+      });
+      
+    </script>
+  
+<div class="be-scroll-top"></div></body></html>

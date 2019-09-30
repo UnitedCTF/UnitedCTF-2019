@@ -1,0 +1,9 @@
+# http://www.robotstxt.org/
+
+User-agent: *
+
+Allow: index.php
+
+Disallow: /old/
+Disallow: /secret-work-in-progress.php
+Disallow: /junk/

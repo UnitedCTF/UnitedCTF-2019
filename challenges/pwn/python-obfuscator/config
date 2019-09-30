@@ -1,0 +1,9 @@
+service pwn
+{
+  type = unlisted
+  protocol = tcp
+  wait = no
+  port = 4000
+  user = challenge
+  server = /app/server.py
+}

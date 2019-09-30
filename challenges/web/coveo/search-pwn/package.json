@@ -1,0 +1,34 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "build": "./build.sh",
+    "start": "./start.sh",
+    "serve": "docker run -d -p 80:3000 --cap-add=SYS_ADMIN --name search-pwn ctf/search-pwn",
+    "docker-build": "docker build . ctf/search-pwn:latest",
+    "docker-tag": "docker tag ctf/search-pwn:latest"
+  },
+  "dependencies": {
+    "body-parser": "1.19",
+    "cookie-parser": "1.4.4",
+    "cors": "2.8.5",
+    "escape": "0.0.1",
+    "express": "4.17.1",
+    "memory-cache": "0.2.0",
+    "pug": "2.0.4",
+    "puppeteer": "1.19.0",
+    "uuid": "3.3.3"
+  },
+  "prettier": {
+    "printWidth": 140,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-flow": "6.23.0",
+    "flow-bin": "0.106.3",
+    "flow-remove-types": "2.106.3",
+    "flow-typed": "2.6.1",
+    "request": "2.88.0",
+    "request-promise-native": "1.0.7"
+  }
+}

@@ -1,0 +1,17 @@
+version: "3"
+services:
+    ysnp-web:
+        build: ./web
+        restart: on-failure
+    proxy2:
+        build: 
+            context: ./proxy
+            args:
+                target: ysnp-web
+    proxy1:
+        build:
+            context: ./proxy
+            args:
+                target: proxy2
+        ports:
+            - 80:80

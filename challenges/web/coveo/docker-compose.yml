@@ -1,0 +1,17 @@
+version: "3"
+services:
+  web:
+    build: search-pwn/.
+    ports:
+      - "3000:3000"
+  client:
+    build:
+      context: client/.
+      args:
+        uri: "localhost"
+        port: 3000    
+        protocol: "http"    
+    ports:
+      - "8080:8080"
+    depends_on:
+      - web

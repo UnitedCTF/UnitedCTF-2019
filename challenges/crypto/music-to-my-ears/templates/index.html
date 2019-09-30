@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Piano Encryption</title>
+        <link rel="stylesheet" href="static/css/styles.css" />
+    </head>
+    <body>
+        <form id="wrap" action="/encrypt" method="POST">
+            <header>
+                <img id="logo" src="static/images/logo-2.png" />
+                <h1>The Best Music Encryption In The World</h1>
+                <h2>For All Your Post-Quantum Needs</h2>
+            </header>
+            <section id="main">
+                <div class="status"></div>
+                <div id="nowplaying"></div>
+                <div class="keys">
+                </div>
+            
+                <div class="sounds"></div>
+                <div class="buttons">
+                    <span class="text-button">Message: </span><textarea name="message"></textarea><br />
+                    <span class="text-button">Tuning (320-2100 Hz): </span><input name="tuning" class="text-input" value="440"></input><br />
+                    <span class="text-button" onmousedown="reset()">RESET</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="text-button" onmousedown="encrypt()">ENCRYPT</span>
+                    <input id="notes" name="notes" type="hidden"></input>
+                </div>
+        </form>
+
+        <small>Front-end based on a codepen by Caroline Gabriel: <a href="https://codepen.io/gabrielcarol/pen/rGeEbY">https://codepen.io/gabrielcarol/pen/rGeEbY</a></small>
+    </body>
+
+    <script src="static/js/app.js">
+    </script>
+</html>

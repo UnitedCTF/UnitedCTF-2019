@@ -1,0 +1,13 @@
+doctype html
+
+include head
+    title Error
+
+
+body
+    include header.pug
+    +header('Error')
+    main
+        .container
+            .row(class='error-united') There was an issue while verifying the URL. Please try again.
+    include footer.pug

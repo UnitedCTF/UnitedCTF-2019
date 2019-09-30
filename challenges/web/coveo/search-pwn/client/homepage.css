@@ -1,0 +1,15 @@
+/*
+BODY
+ */
+.search-form {
+  width: 100%;
+}
+.search-input {
+  font-size: 19px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

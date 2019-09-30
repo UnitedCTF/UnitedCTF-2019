@@ -1,0 +1,203 @@
+version: "3"
+services:
+    dont_dead_open_inside:
+        build: ./pwn/dont_dead_open_inside
+        restart: on-failure
+        ports:
+            - 6000:3000
+    drapeaudepot:
+        build: ./web/drapeaudepot
+        restart: on-failure
+        ports:
+            - 6001:80
+    notebook:
+        build: ./pwn/notebook
+        restart: on-failure
+        ports:
+            - 6002:3000
+    sqli-1:
+        build: ./web/sqli-1
+        restart: on-failure
+        ports:
+            - "6003:80"
+        volumes:
+            - "./web/sqli-1/public/:/var/www/html"
+    sqli-2:
+        build: ./web/sqli-2
+        restart: on-failure
+        ports:
+            - "6004:80"
+        volumes:
+            - "./web/sqli-2/public/:/var/www/html"
+    sqli-3:
+        build: ./web/sqli-3
+        restart: on-failure
+        ports:
+            - "6005:80"
+        volumes:
+            - "./web/sqli-3/public/:/var/www/html"
+    spider:
+        build: ./web/spider
+        restart: on-failure
+        ports:
+            - "12000:80"
+        volumes:
+            - "./web/spider/src/:/var/www/html"
+    cowsay:
+        build: ./web/cowsay
+        environment:
+            - FLAG=FLAG-th3c0wg03sm00
+        restart: on-failure
+        ports:
+            - "6006:80"
+    je_me_souviens:
+        build: ./web/je_me_souviens
+        restart: on-failure
+        ports:
+            - "6007:3000"
+    ysnp-web:
+        build: ./web/you_shall_not_pass/web
+        restart: on-failure
+        volumes:
+            - "./web/you_shall_not_pass/web/public:/var/www/html"
+    proxy2:
+        build:
+            context: ./web/you_shall_not_pass/proxy
+            args:
+                target: ysnp-web
+        restart: on-failure
+    proxy1:
+        build:
+            context: ./web/you_shall_not_pass/proxy
+            args:
+                target: proxy2
+        restart: on-failure
+        ports:
+            - 6008:80
+    cache-cache:
+        build: ./web/cache-cache
+        restart: on-failure
+        ports:
+            - 4000:3000
+    ssrf:
+        build: ./web/ssrf
+        restart: on-failure
+        ports:
+            - "7010:80"
+        volumes:
+            - "./web/ssrf/public/:/var/www/html"
+            - /var/www/html/tmp
+    pipe-guide:
+        build: ./web/pipe_guide
+        restart: on-failure
+        ports:
+          - 6009:9999
+    le_mur_de_berlin:
+        build: ./web/le_mur_de_berlin
+        restart: on-failure
+        ports:
+            - "6969:6969"
+            - "6012:80"
+
+    token_generator:
+        build: ./crypto/token_generator
+        restart: on-failure
+        ports:
+          - "7545:80"
+
+    wall_of_shame:
+        build: ./web/wall_of_shame
+        restart: on-failure
+        ports:
+            - 7000:80
+        volumes:
+            - "./web/wall_of_shame/public/:/var/www/html"
+            - /var/www/html/uploads
+    crawl_me_baby:
+        build: ./programming/crawl_me_baby
+        restart: on-failure
+        ports:
+            - 7001:80
+            
+    blackjack_web:
+        build: 
+            context: "./programming/blackjack/app"
+            args:
+                SERVER_URL: "\"http://localhost:8000/\""
+        restart: on-failure
+        ports:
+            - 8001:8080
+    blackjack_server:
+        build: ./programming/blackjack/server
+        restart: on-failure
+        ports:
+            - 8000:3000
+            
+    are-you-modular:
+        build: ./crypto/are-you-modular
+        restart: on-failure
+        ports:
+            - "4004:5000"
+            
+    music_to_my_ears:
+        build: ./crypto/music-to-my-ears
+        restart: on-failure
+        ports:
+            - 6011:5000
+            
+    python_obfuscator:
+        build: ./pwn/python-obfuscator
+        restart: on-failure
+        ports:
+            - 6010:4000
+
+    svp_demander_gentiment:
+        build: ./networking/Svp-demander-gentiment
+        restart: on-failure
+        ports:
+            - 42000:42000
+
+    lost:
+        build: ./programming/lost
+        restart: on-failure
+        ports:
+            - 7005:8000
+    coveo_web:
+      build: ./web/coveo/search-pwn/.
+      ports:
+        - "10000:3000"
+    coveo_client:
+      build:
+        context: ./web/coveo/client/.
+        args:
+          uri: "localhost"
+          port: 10000
+          protocol: "http"
+      ports:
+        - "7007:8080"
+      depends_on:
+        - coveo_web
+        
+    encrypt_me:
+        build: ./crypto/encrypt-me
+        restart: on-failure
+        ports:
+            - "3006:3000"
+    
+    freedom:
+        build: ./pwn/freedom
+        restart: on-failure
+        ports:
+            - "3007:3000"
+
+    family_tree:
+        build: ./crypto/family-tree
+        restart: on-failure
+        ports:
+            - "3004:80"
+    
+    php_text_editor:
+        build: ./web/php-text-editor
+        restart: on-failure
+        ports:
+            - 3005:80

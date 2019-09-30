@@ -1,0 +1,11 @@
+service pwn
+{
+  type = unlisted
+  protocol = tcp
+  wait = no
+  port = 3000
+  user = challenge
+  server = /bin/bash
+  server_args = /launcher.sh
+  env = PWD=/app
+}

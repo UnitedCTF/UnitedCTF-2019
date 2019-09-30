@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= 'Envoi de formulaires'
+  form(method='POST' action='/')
+    input(type='hidden', name='flag' value=0)
+    button(type='submit') Envoyer
+    if flag
+      p= flag

@@ -1,0 +1,22 @@
+doctype html
+
+html
+  include head
+  body
+    include header
+    +header("ADMIN!!!!")
+    main
+      .container
+        div(class='row')
+          h5 Source files:
+          ul
+            li
+              a(class='btn' href='/search.js') search.js
+          h5 Send a search link URL for verification by our automated relevance engine.
+          p Users visiting this link will have the same client id as you
+        div(class='row')
+          form(class='col s12' method='get' action='newsboard')
+            label URL:
+              input(type='text' name='url' class='validate')
+            button(class='btn') Post
+    include footer

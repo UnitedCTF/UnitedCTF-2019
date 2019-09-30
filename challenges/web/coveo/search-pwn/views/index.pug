@@ -1,0 +1,38 @@
+doctype html
+
+include head
+  title SearchPWN
+  script(type='module' src='/homepage.js')
+  link(type='text/css' rel='stylesheet' href='/homepage.css')
+
+body
+  include header.pug
+  +header(flag)
+  main
+    .container
+      .row
+        .search-box.valign-wrapper
+          form.search-form(action='search')
+            .input-field.col.s6.offset-s3
+              input.search-input(placeholder='Search here...' type='search' name='q')
+      .row.buttons
+        button.open-bug-report.btn.waves-effect.waves-light.modal-trigger(data-target='bug-report-modal' type='submit')
+          | Report
+          | a bug to the admin 
+          i.material-icons.right bug_report
+    #bug-report-modal.modal
+      .modal-content
+        p Specify an url and the admin will check it to investigate
+        p The admin will not visit foreign websites (he's dumb, but not that dumb)
+        form(method='get' action='report-bug')
+          .row
+            .input-field
+              label URL:
+              input.url-input-box(type='text' name='url' required='required')
+          .row
+            .input-field
+            label Description:
+            input.bug-description-input-box(type='text' name='description' required='required')
+          button.submit-bug-report.btn Submit
+  include footer.pug
+

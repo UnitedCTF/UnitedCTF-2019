@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="./Beagle_files/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="./Beagle_files/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="./Beagle_files/app.css" type="text/css">
+    <style>
+    .error {
+      color: red;
+    }
+    </style>
+  </head>
+  <body class="be-splash-screen">
+    <div class="be-wrapper be-login">
+      <div class="be-content">
+        <div class="main-content container-fluid">
+          <div class="splash-container">
+            <div class="card card-border-color card-border-color-primary">
+              <div class="card-header"><img class="logo-img" src="./Beagle_files/logo-xx.png" alt="logo" width="102"><span class="splash-description">Entrez vos informations personnelles.</span></div>
+              <% if (locals.error) { %>
+                <span class="splash-description error">Les informations fournies sont invalides.</span>
+              <% } %>
+              <div class="card-body">
+                <form action="." method="POST">
+                  <div class="form-group">
+                    <input class="form-control" id="username" name="username" type="text" placeholder="Courriel" autocomplete="off">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="password" name="password" type="password" placeholder="Mot de passe" autocomplete="off" >
+                  </div>
+                  <div class="form-group row login-tools">
+                    <div class="col-6 login-remember">
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox" id="checkbox1">
+                        <label class="custom-control-label" for="checkbox1">Connexion automatique</label>
+                      </div>
+                    </div>
+                    <div class="col-6 login-forgot-password"><a href="/forgot">Mot de passe oublié?</a></div>
+                  </div>
+                  <div class="form-group login-submit"><button type="submit" class="btn btn-primary btn-xl" data-dismiss="modal">Se connecter</button></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./Beagle_files/jquery.min.js" type="text/javascript"></script>
+    <script src="./Beagle_files/perfect-scrollbar.min.js" type="text/javascript"></script>
+    <script src="./Beagle_files/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="./Beagle_files/app.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      	//-initialize the javascript
+      	App.init();
+      });
+      
+    </script>
+  
+<div class="be-scroll-top"></div></body></html>
